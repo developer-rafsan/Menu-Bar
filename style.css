@@ -1,0 +1,219 @@
+/* font style link up */
+@import url("https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 500;
+}
+
+.home-page {
+  height: 100vh;
+  background-color: #7227ff;
+  width: calc(100vw - 270px);
+  position: relative;
+  left: 270px;
+  transition: all 0.5s;
+  display: grid;
+  place-items: center;
+  z-index: -1;
+}
+
+.home-page h1 {
+  font-size: 5rem;
+  color: #eee;
+}
+
+.navigation-bar.close ~ .home-page {
+  width: calc(100vw - 70px);
+  left: 70px;
+}
+
+.navigation-bar {
+  background-color: #e4e4e4;
+  width: 270px;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 0.5s;
+  z-index: 999999;
+}
+
+.navigation-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.navigation-bar .logo-detals {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100px;
+  position: relative;
+}
+
+.navigation-bar .close-arrow {
+  position: absolute;
+  line-height: 35px;
+  width: 35px;
+  background-color: #5452ff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e4e4e4;
+  left: 255px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navigation-bar .logo-detals .manu-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 20px !important;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.navigation-bar .logo-detals h1 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: #e63946;
+  cursor: default;
+  font-weight: 900;
+  transition: all 0.5s;
+}
+
+.navigation-bar .menu-bar ul li {
+  margin-bottom: 1rem;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.navigation-bar .menu-bar li .nav-link {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navigation-bar .menu-bar li .sub-menu {
+  background-color: #eee;
+  display: none;
+}
+
+.navigation-bar .menu-bar li .sub-menu.show {
+  display: block;
+}
+
+.navigation-bar .menu-bar li .sub-menu li {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #180046;
+  margin: unset;
+  padding: 0px 4.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+  list-style: none;
+}
+
+.navigation-bar .menu-bar li .sub-menu li:nth-child(1) {
+  display: none;
+}
+
+.navigation-bar .menu-bar li .sub-menu li:hover {
+  opacity: 1;
+}
+
+.navigation-bar .menu-bar ul li i {
+  width: 70px;
+  text-align: center;
+  color: #180046;
+}
+
+.navigation-bar .menu-bar ul li:hover {
+  background-color: #eee;
+}
+
+.navigation-bar .menu-bar ul li a {
+  color: #180046;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navigation-bar .menu-bar ul li a i {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  width: 70px;
+  text-align: center;
+  color: #180046;
+  cursor: default;
+  transition: all 0.5s;
+}
+
+.navigation-bar .menu-bar ul li a p {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: #180046;
+  transition: all 0.5s;
+}
+
+/* responsive part */
+.navigation-bar.close {
+  width: 70px;
+  overflow: unset;
+}
+
+.navigation-bar.close .menu-bar ul li {
+  margin-bottom: 1rem;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.navigation-bar.close .close-arrow {
+  left: 55px;
+  transform: rotate(180deg);
+}
+
+.navigation-bar.close .menu-bar li .sub-menu li:nth-child(1) {
+  display: block;
+  opacity: 1;
+}
+
+.navigation-bar.close .logo-Name {
+  opacity: 0;
+  font-size: 0;
+}
+
+.navigation-bar.close .menu-bar li .sub-menu {
+  position: fixed;
+  display: block;
+  left: 70px;
+  margin-top: -60px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.navigation-bar.close .menu-bar li .sub-menu li {
+  padding: 0px 1rem;
+  margin: unset;
+}
+
+.navigation-bar.close .menu-bar li .nav-link a p,
+.navigation-bar.close .menu-bar li .nav-link .arraw {
+  font-size: 0px;
+}
+
+.navigation-bar.close .menu-bar li:hover .sub-menu {
+  margin-top: -50px;
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.navigation-bar.close .menu-bar li i {
+  cursor: pointer;
+}
